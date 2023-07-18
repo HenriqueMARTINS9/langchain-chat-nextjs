@@ -11,7 +11,7 @@ const openai = new OpenAIApi(configuration);
 export default async function(req, res) {
   const completion = await openai.createChatCompletion({
     // Replace `gpt-4` with `gpt-3.5-turbo` if you don't have early access to GPT-4
-    model: "gpt-4",
+    model: "gpt-3.5-turbo",
     messages: [{ "role": "system", "content": "You are a helpful assistant." }].concat(req.body.messages)
 
   });
